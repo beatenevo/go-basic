@@ -9,7 +9,6 @@ import (
 	"net"
 	"reflect"
 	"sync"
-	//"E:/go-basic/gee-rpc/codec"
 )
 
 const MagicNumber = 0x3bef5c
