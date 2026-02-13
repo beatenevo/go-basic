@@ -20,10 +20,9 @@ func startServer(addr chan string) {
 	geerpc.Accept(l)
 }
 func main() {
-	//log.SetFlags(0)
+	log.SetFlags(0)
 	addr := make(chan string)
 	go startServer(addr)
-
 	conn, _ := net.Dial("tcp", <-addr)
 	defer func() { _ = conn.Close() }()
 	time.Sleep(time.Second)
